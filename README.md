@@ -39,7 +39,8 @@ $ ./convert.rb *yaml
 Convert the provided YAML files, and save the resulting XML into a specified folder.
 
 ```bash
-$ ./convert.py -f some/other/folder 1.yaml 2.yaml ```
+$ ./convert.py -f some/other/folder 1.yaml 2.yaml
+```
 
 ### Validating XML
 
