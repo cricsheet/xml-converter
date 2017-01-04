@@ -1,6 +1,6 @@
 # xml-converter
 
-A collection of small ruby scripts to convert [version 0.7](http://cricsheet.org/format/) [Cricsheet YAML data files](http://cricsheet.org/downloads/) into XML, and to allow validation of the XML against [the schema file (schema.xsd)](schema.xsd).
+A collection of small ruby scripts to convert [version 0.8](http://cricsheet.org/format/) [Cricsheet YAML data files](http://cricsheet.org/downloads/) into XML, and to allow validation of the XML against [the schema file (schema.xsd)](schema.xsd).
 
 These scripts are used to generate the XML data available in the [Cricsheet XML project](https://github.com/cricsheet/cricsheet-xml).
 

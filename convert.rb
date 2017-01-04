@@ -7,7 +7,7 @@ require 'fileutils'
 require 'active_support/core_ext/hash/conversions'
 
 # A simple class to override default ruby YAML parsing of the over and
-# ball entry from the YAML. The 0.7 data has it as a simple float,
+# ball entry from the YAML. The 0.8 data has it as a simple float,
 # meaning that 0.10 (the 10th ball of the 1st over) incorrectly becomes
 # 0.1. This fixes the problem by simply returning the original string.
 class CricsheetScalarScanner < Psych::ScalarScanner
@@ -90,7 +90,7 @@ files.each_with_index do |file, index|
     end
 
     { inningsNumber: inning_index + 1 }
-      .merge(inning_data.slice('team'))
+      .merge(inning_data.slice('team', 'penalty_runs'))
       .merge(deliveries: delivery_data)
   end
 
