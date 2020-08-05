@@ -2,60 +2,14 @@
 
 A collection of small ruby scripts to convert [version 0.9](http://cricsheet.org/format/) [Cricsheet YAML data files](http://cricsheet.org/downloads/) into XML, and to allow validation of the XML against [the schema file (schema.xsd)](schema.xsd).
 
-These scripts are used to generate the XML data available in the [Cricsheet XML project](https://github.com/cricsheet/cricsheet-xml).
+These scripts are used to generate the XML data available in the [Cricsheet XML project](https://code.deeden.co.uk/cricsheet-xml).
 
-## Installation
+## What has happened to the project?
 
-You can manage the dependencies using [Bundler](http://bundler.io/). Once you have it installed you can install the dependencies using:
+TLDR: Project (`cricsheet/xml-converter`) is now [hosted on Sourcehut](https://code.deeden.co.uk/cricsheet-xml-converter) due to GitHub's continued collaboration with ICE (U.S. Immigration and Customs Enforcement).
 
-```bash
-$ bundle install
-```
+Hello :wave:, nice to see you! If you're here you're presumably looking for the project (`cricsheet/xml-converter`) that used to be here. The project still exists, it has just moved elsewhere. Let me tell you both why, and where you can find the project now.
 
-## Usage
+Given GitHub's [ongoing policy of collaborating with ICE](https://thenextweb.com/politics/2019/10/09/github-microsoft-trump-ice-contract/) I don't feel comfortable supporting the platform ([as](https://deeden.co.uk/notes/2019/10/24/085956/) [I've](https://deeden.co.uk/notes/2019/11/15/094544/) [mentioned](https://deeden.co.uk/notes/2019/11/20/160118/) [elsewhere](https://deeden.co.uk/notes/2020/04/14/165427/)), so I've gradually moved all of my repositories (both private and public) elsewhere.
 
-`convert.rb` is a ruby script, which can be configured using command-line arguments. See `./convert.rb --help` for all available options.
-
-`validate.rb` is also a ruby script, which cannot be configured. It simply takes a list of XML files to be validated against the schema, and outputs any errors it finds for each file.
-
-## Examples
-
-### Converting YAML to XML
-
-In all of the examples that follow the resulting XML will be saved with with a `.xml` extension. For example, `foobar.yaml` will be converted to `foobar.xml`.
-
-Convert a single YAML file, and save the resulting XML into the default output folder (`./tmp`).
-
-```bash
-$ ./convert.rb data.yaml
-```
-
-Convert the provided YAML files, and save the resulting XML into the default output folder (`./tmp`).
-
-```bash
-$ ./convert.rb *yaml
-```
-
-Convert the provided YAML files, and save the resulting XML into a specified folder.
-
-```bash
-$ ./convert.rb -f some/other/folder 1.yaml 2.yaml
-```
-
-### Validating XML
-
-Validate a single XML file against the schema.
-
-```bash
-$ ./validate.rb data.xml
-```
-
-Validate multiple XML files against the schema.
-
-```bash
-$ ./validate.rb data.xml other_data.xml
-```
-
-## Credits
-
-Thanks to Rob Mohseni for the initial version of the schema file, which I then extended. Without his efforts the XML version would never have happened.
+I've hoped that GitHub would cancel their policy ([as do many of the staff](https://www.washingtonpost.com/context/letter-from-github-employees-to-ceo-about-the-company-s-ice-contract/fb280de9-2bc3-40d5-b1a5-e3b954bf0d25/), including good people I know), but nothing has happened, so I've moved. You can find the [project at Sourcehut](https://code.deeden.co.uk/cricsheet-xml-converter), as well as [issue tracking](https://code.deeden.co.uk/cricsheet-xml-converter/issues). [Patches](https://code.deeden.co.uk/cricsheet-xml-converter/patches) will also still be gratefully received.
